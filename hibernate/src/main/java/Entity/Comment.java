@@ -1,6 +1,7 @@
 package Entity;
 
 import Entity.Rate.RateComment;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,11 +12,15 @@ import java.util.List;
  */
 @Entity
 @Table
+@Proxy(lazy = false)
 public class Comment {
     @Id
     @GeneratedValue
     int id;
     String text;
+
+    public Comment() {
+    }
 
     public int getId() {
         return id;
@@ -73,7 +78,7 @@ public class Comment {
         this.rate = rate;
     }
 
-    @OneToMany(mappedBy = "comment",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "comment",cascade = CascadeType.PERSIST,orphanRemoval = true)
     List<RateComment> rateComment = new ArrayList<RateComment>();
     @ManyToOne
     Publication publication;

@@ -2,6 +2,7 @@ package Entity.Rate;
 
 import Entity.Publication;
 import Entity.User;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table
+@Proxy(lazy = false)
 public class RatePublication {
     @Id
     @GeneratedValue

@@ -1,6 +1,7 @@
 package Entity;
 
 import Entity.Rate.RatePublication;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
  */
 @Entity
 @Table
+@Proxy(lazy = false)
 public class Publication{
     @Id
     @GeneratedValue
@@ -19,7 +21,7 @@ public class Publication{
     String text;
     String code;
     int rate=0;
-    @OneToMany(mappedBy = "publication",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "publication",cascade = CascadeType.PERSIST,orphanRemoval = true)
     List<RatePublication> ratePublication = new ArrayList<RatePublication>();
 
     public int getId() {
@@ -90,7 +92,7 @@ public class Publication{
 
     }
 
-    @OneToMany(mappedBy = "publication",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "publication",cascade = CascadeType.PERSIST,orphanRemoval = true)
     List<Comment> comments = new ArrayList<Comment>();
 
     public Publication(String title, String text, String code, int rate, List<RatePublication> ratePublication, List<Comment> comments, User user) {

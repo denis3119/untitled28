@@ -16,6 +16,7 @@ import java.util.List;
 @Proxy(lazy = false)
 public class User {
     @Id
+    @Column(unique = true)
     @GeneratedValue
     int id;
 
@@ -24,12 +25,17 @@ public class User {
     String Role;
     boolean blocked=false;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
     List<RateComment> rateComments = new ArrayList<RateComment>();
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
     List<RatePublication> ratePublication = new ArrayList<RatePublication>();
 
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    List<Publication> publications = new ArrayList<Publication>();
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    List<Comment> comments= new ArrayList<Comment>();
 
     public List<RateComment> getRateComments() {
         return rateComments;
@@ -60,8 +66,7 @@ public class User {
         this.comments = comments;
     }
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST)
-    List<Publication> publications = new ArrayList<Publication>();
+
 
     public List<Comment> getComments() {
         return comments;
@@ -71,8 +76,7 @@ public class User {
         this.comments = comments;
     }
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST)
-    List<Comment> comments= new ArrayList<Comment>();
+
     public int getId() {
         return id;
     }

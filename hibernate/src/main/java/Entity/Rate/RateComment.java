@@ -1,6 +1,7 @@
 package Entity.Rate;
 
 import Entity.*;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 /**
@@ -8,6 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table
+@Proxy(lazy = false)
 public class RateComment {
     @Id
     @GeneratedValue

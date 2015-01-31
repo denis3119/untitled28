@@ -1,26 +1,38 @@
 package EntityServices;
 
-import Entity.Publication;
 import Entity.User;
+import EntityServices.Service.IService.IServiceEntity;
 import EntityServices.Service.Service;
+
+import java.util.List;
 
 /**
  * Created by denik on 31.01.2015.
  */
-public class UserService extends Service<User> {
-    private final User getById(int id)
+public class UserService extends Service<User> implements IServiceEntity<User> {
+
+    public final User getById(int id)
     {
         open();
         User user = (User) session.get(User.class,id);
         close();
         return user;
     }
-    public void addPublication(int userId, Publication publication){
+
+    public void deleteById(int id)
+    {
         open();
-        User user = (User) session.get(User.class,userId);
-        publication.setUser(user);
-        new PublicationService().add(publication);
+        User user = (User) session.get(User.class,id);
+        session.delete(user);
         close();
     }
+    public List<User> toList()
+    {
+        open();
+        List<User> list = (List<User>)session.createQuery("from User as user").list();
+        close();
+        return list;
+    }
+    
 
 }

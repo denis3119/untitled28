@@ -1,12 +1,13 @@
 package EntityServices.Service;
 
+import EntityServices.Service.IService.IService;
 import Hibernate.HibernateUtil;
 import org.hibernate.Session;
 
 /**
  * Created by denik on 31.01.2015.
  */
-public class Service<T> {
+public class Service<T>  implements IService<T>{
     protected Session session;
     protected void open()
    {
@@ -32,11 +33,16 @@ public class Service<T> {
         session.delete(entity);
         close();
     }
+
+
+
     public void update(T entity)
     {
         open();
         session.saveOrUpdate(entity);
         close();
     }
+
+
 
 }
