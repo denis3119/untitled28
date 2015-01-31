@@ -2,6 +2,7 @@ package Entity;
 
 import Entity.Rate.RateComment;
 import Entity.Rate.RatePublication;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 @Entity
 @Table
+@Proxy(lazy = false)
 public class User {
     @Id
     @GeneratedValue
