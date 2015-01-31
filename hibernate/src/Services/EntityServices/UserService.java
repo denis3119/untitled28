@@ -33,6 +33,6 @@ public class UserService extends Service<User> implements IServiceEntity<User> {
         close();
         return list;
     }
-    
+
 
 }

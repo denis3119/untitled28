@@ -1,6 +1,8 @@
 package EntityServices;
 
+import Entity.Comment;
 import Entity.Publication;
+import Entity.User;
 import EntityServices.Service.IService.IServiceEntity;
 import EntityServices.Service.Service;
 
@@ -33,4 +35,5 @@ public class PublicationService extends Service<Publication> implements IService
         session.delete(publication);
         close();
     }
+
 }

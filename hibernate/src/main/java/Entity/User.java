@@ -19,22 +19,22 @@ public class User {
     @Column(unique = true)
     @GeneratedValue
     int id;
-
+    @Column(unique = true)
     String Name;
     String Password;
     String Role;
     boolean blocked=false;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
     List<RateComment> rateComments = new ArrayList<RateComment>();
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
     List<RatePublication> ratePublication = new ArrayList<RatePublication>();
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
     List<Publication> publications = new ArrayList<Publication>();
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
     List<Comment> comments= new ArrayList<Comment>();
 
     public List<RateComment> getRateComments() {
