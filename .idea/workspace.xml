@@ -34,8 +34,13 @@
         <entry file="file://$PROJECT_DIR$/hibernate/src/main/java/Hibernate/HibernateUtil.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="629">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="0.6080692" vertical-offset="571" max-vertical-offset="918">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+>>>>>>> parent of 066e827... Before spring
 =======
             <state vertical-scroll-proportion="0.6080692" vertical-offset="571" max-vertical-offset="918">
               <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
@@ -845,8 +850,12 @@
       <updated>1422701665280</updated>
       <workItem from="1422701667812" duration="7562000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1422709550042" duration="21131000" />
       <workItem from="1422793814452" duration="839000" />
+=======
+      <workItem from="1422709550042" duration="13016000" />
+>>>>>>> parent of 066e827... Before spring
 =======
       <workItem from="1422709550042" duration="13016000" />
 >>>>>>> parent of 066e827... Before spring
@@ -855,7 +864,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="29532000" />
+=======
+    <option name="totallyTimeSpent" value="20578000" />
+>>>>>>> parent of 066e827... Before spring
 =======
     <option name="totallyTimeSpent" value="20578000" />
 >>>>>>> parent of 066e827... Before spring
@@ -1351,8 +1364,13 @@
     <entry file="file://$PROJECT_DIR$/hibernate/src/Services/EntityServices/Service/Service.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.3314121" vertical-offset="123" max-vertical-offset="952">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.6080692" vertical-offset="571" max-vertical-offset="918">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+>>>>>>> parent of 066e827... Before spring
 =======
         <state vertical-scroll-proportion="0.6080692" vertical-offset="571" max-vertical-offset="918">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />

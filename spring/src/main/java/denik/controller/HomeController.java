@@ -2,7 +2,10 @@ package denik.controller;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 066e827... Before spring
 =======
 >>>>>>> parent of 066e827... Before spring
 import Entity.Comment;
@@ -11,6 +14,9 @@ import Entity.User;
 import EntityServices.CommentService;
 import EntityServices.PublicationService;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 066e827... Before spring
+=======
 >>>>>>> parent of 066e827... Before spring
 =======
 >>>>>>> parent of 066e827... Before spring
@@ -28,6 +34,7 @@ public class HomeController {
 
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 //		//TestTestTEst.main();
@@ -60,6 +67,8 @@ public class HomeController {
 =======
 =======
 >>>>>>> parent of 066e827... Before spring
+=======
+>>>>>>> parent of 066e827... Before spring
 		//TestTestTEst.main();
 		UserService userService= new UserService();
 		User user= new User();
@@ -85,6 +94,9 @@ public class HomeController {
 		Comment comments= userService.toList().get(0).getComments().get(0);
 		String d;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 066e827... Before spring
+=======
 >>>>>>> parent of 066e827... Before spring
 =======
 >>>>>>> parent of 066e827... Before spring
