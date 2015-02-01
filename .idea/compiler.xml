@@ -23,11 +23,16 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="hibernate" />
+        <module name="HibernateHelloWorldXML" />
         <module name="spring" />
+        <module name="untitled" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hibernate" target="1.8" />
       <module name="spring" target="1.6" />
+      <module name="untitled" target="1.6" />
+      <module name="untitled28" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

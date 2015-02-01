@@ -1,8 +1,6 @@
 package Entity;
 
 import Entity.Rate.RateComment;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -81,7 +79,6 @@ public class Comment {
     }
 
     @OneToMany(mappedBy = "comment",cascade = CascadeType.PERSIST,orphanRemoval = true)
-    @Fetch(value = FetchMode.SUBSELECT)
     List<RateComment> rateComment = new ArrayList<RateComment>();
     @ManyToOne
     Publication publication;

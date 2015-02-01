@@ -1,8 +1,6 @@
 package Entity;
 
 import Entity.Rate.RatePublication;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -24,7 +22,6 @@ public class Publication{
     String code;
     int rate=0;
     @OneToMany(mappedBy = "publication",cascade = CascadeType.PERSIST,orphanRemoval = true)
-    @Fetch(value = FetchMode.SUBSELECT)
     List<RatePublication> ratePublication = new ArrayList<RatePublication>();
 
     public int getId() {
