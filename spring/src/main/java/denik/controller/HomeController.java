@@ -1,5 +1,6 @@
 package denik.controller;
 
+import EntityServices.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,7 +37,8 @@ public class HomeController {
 //		List<Comment> commentList=	commentService.toList();
 //		Comment comments= userService.toList().get(0).getComments().get(0);
 //		String d;
-
+		UserService userService= new UserService();
+		userService.toList();
 
 		return new ModelAndView("home");
 	}

@@ -11,13 +11,13 @@ public class Service<T>  implements IService<T>{
     protected Session session;
     protected void open()
    {
-       if (session.isOpen()) return;
+      // if (session.isOpen()) return;
        session = HibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();
    }
    protected void close()
    {
-       if (!session.isOpen()) return;
+      // if (!session.isOpen()) return;
        session.getTransaction().commit();
        session.close();
 
