@@ -19,14 +19,10 @@ public class User {
     @Column(unique = true)
     @GeneratedValue
     int id;
-
     @Column(unique = true)
     String Name;
     String Password;
-
-
     String Role;
-
     boolean blocked=false;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
@@ -59,7 +55,16 @@ public class User {
 
 
 
-
+    public User(String name, String password, String role, boolean blocked, List<RateComment> rateComments, List<RatePublication> ratePublication, List<Publication> publications, List<Comment> comments) {
+        Name = name;
+        Password = password;
+        Role = role;
+        this.blocked = blocked;
+        this.rateComments = rateComments;
+        this.ratePublication = ratePublication;
+        this.publications = publications;
+        this.comments = comments;
+    }
 
 
 
@@ -96,19 +101,7 @@ public class User {
         Password = password;
     }
 
-    public User(String name, String password, String role, boolean blocked, List<RateComment> rateComments, List<RatePublication> ratePublication, List<Publication> publications, List<Comment> comments) {
-        Name = name;
-        Password = password;
-        Role = role;
-        this.blocked = blocked;
-        this.rateComments = rateComments;
-        this.ratePublication = ratePublication;
-        this.publications = publications;
-        this.comments = comments;
-    }
-
     public String getRole() {
-
         return Role;
     }
 
