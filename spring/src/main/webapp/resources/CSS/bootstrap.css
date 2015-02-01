@@ -789,7 +789,10 @@ pre code {
   margin-right: -15px;
   margin-left: -15px;
 }
-
+.body-content
+{
+  margin-top: 55px;
+}
 .row:before,
 .row:after {
   display: table;

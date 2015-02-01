@@ -9,8 +9,13 @@
         <jsp:include page="masterPage.jsp"></jsp:include>
     </head>
     <body>
+       <jsp:include page="header.jsp"></jsp:include>
+        <div class="container body-content" >
+
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
-    <input class="btn btn-default" type="button" value="hh">
+        <input class="btn btn-default" type="button" value="hh">
+        <jsp:include page="footer.jsp"></jsp:include>
+        </div>
     </body>
 </html>
