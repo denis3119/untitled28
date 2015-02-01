@@ -102,5 +102,4 @@ public class HomeController {
 >>>>>>> parent of 066e827... Before spring
 		return new ModelAndView("home");
 	}
-
 }
