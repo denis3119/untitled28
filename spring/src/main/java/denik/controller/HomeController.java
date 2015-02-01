@@ -37,7 +37,7 @@ public class HomeController {
 //		Comment comments= userService.toList().get(0).getComments().get(0);
 //		String d;
 
-		
+
 		return new ModelAndView("home");
 	}
 }

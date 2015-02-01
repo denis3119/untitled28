@@ -6,9 +6,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home</title>
+        <jsp:include page="masterPage.jsp"></jsp:include>
     </head>
     <body>
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
+    <input class="btn btn-default" type="button" value="hh">
     </body>
 </html>
