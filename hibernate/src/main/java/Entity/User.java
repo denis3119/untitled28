@@ -2,6 +2,8 @@ package Entity;
 
 import Entity.Rate.RateComment;
 import Entity.Rate.RatePublication;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
@@ -26,15 +28,19 @@ public class User {
     boolean blocked=false;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     List<RateComment> rateComments = new ArrayList<RateComment>();
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     List<RatePublication> ratePublication = new ArrayList<RatePublication>();
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     List<Publication> publications = new ArrayList<Publication>();
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,orphanRemoval = true,fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     List<Comment> comments= new ArrayList<Comment>();
 
     public List<RateComment> getRateComments() {
